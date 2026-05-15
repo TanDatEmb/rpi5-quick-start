@@ -34,7 +34,7 @@ After=network-online.target docker.service
 Requires=docker.service
 
 [Service]
-ExecStart=/usr/bin/docker exec ros2_humble /opt/ros/humble/bin/microdds_agent -t Serial -d /dev/serial0 -b 921600
+ExecStart=/usr/bin/docker exec ros2_jazzy /opt/ros/jazzy/bin/microdds_agent -t Serial -d /dev/serial0 -b 921600
 Restart=on-failure
 
 [Install]

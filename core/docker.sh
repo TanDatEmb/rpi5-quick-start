@@ -9,8 +9,8 @@ source "${ROOT_DIR}/lib/liblog.sh"
 
 main() {
     local target_user="${SUDO_USER:-${USER}}"
-    local image_name="inspekcja:humble-pi5-v1"
-    local container_name="ros2_humble"
+    local image_name="inspekcja:jazzy-pi5-v1"
+    local container_name="ros2_jazzy"
     local build_context="${ROOT_DIR}/docker"
 
     if ! command -v docker >/dev/null 2>&1; then
