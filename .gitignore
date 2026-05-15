@@ -1,0 +1,22 @@
+# Editor
+.vscode/
+.idea/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Shell and runtime temp files
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+
+# Python cache (for helper scripts if added later)
+__pycache__/
+*.pyc
+
+# Build/output scratch directories
+.build/
+out/
