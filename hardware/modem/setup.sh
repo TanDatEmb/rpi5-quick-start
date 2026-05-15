@@ -54,10 +54,10 @@ main() {
   fi
 
   if [[ -z "$iface" ]]; then
-    iface="$(ip -brief link | awk '/^wwx/{print $1; exit}')"
+    iface="$(ip -brief link | awk '/^(wwx|wwan|usb)[0-9a-f]/{print $1; exit}')"
   fi
   if [[ -z "$iface" ]]; then
-    log_error "Could not detect modem network interface"
+    log_error "Could not detect modem network interface (tried wwx, wwan, usb)"
     exit 1
   fi
 

@@ -82,6 +82,14 @@ main() {
     ask_and_run "${SCRIPT_DIR}/hardware/uart_fc.sh" "UART connection with Flight Controller"
 
     print_summary
+
+    local rb_choice=""
+    read -r -p "Some changes require a reboot to take effect (GPIO, UART, overlays). Reboot now? (y/N): " rb_choice
+    if [[ "$rb_choice" =~ ^[Yy]$ ]]; then
+        log_info "Rebooting system..."
+        reboot
+    fi
+
     log_ok "All selected setup tasks have been processed"
 }
 
